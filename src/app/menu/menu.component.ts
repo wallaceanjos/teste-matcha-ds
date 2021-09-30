@@ -18,4 +18,16 @@ export class MenuComponent {
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
+  themeToggle:boolean = false;
+
+
+    themeToggler(){
+        this.themeToggle =! this.themeToggle;
+        if (this.themeToggle == true){
+            document.body.className = document.body.className.replace("matcha-light-theme","matcha-dark-theme");
+        } else {
+            document.body.className = document.body.className.replace("matcha-dark-theme","matcha-light-theme");
+        }
+    }
+
 }
